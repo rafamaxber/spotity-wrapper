@@ -1,7 +1,7 @@
 {
-  "name": "js-tdd-course",
+  "name": "spotify-wrapper",
   "version": "1.0.0",
-  "description": "Nossa biblioteca do curso de JS com TDD na prática.",
+  "description": "A wrapper to work with the Spotify web API",
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/*.js",
@@ -11,19 +11,24 @@
     "test:coverage": "nyc npm test"
   },
   "nyc": {
-    "reporter": ["text", "html"],
-    "exclude": ["tests/**"]
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/willianjusten/js-tdd-course.git"
+    "url": "git+https://github.com/rafamaxber/spotify-wrapper.git"
   },
   "keywords": [
     "js",
     "tdd",
     "library"
   ],
-  "author": "Willian Justen <willianjustenqui@gmail.com> (https://willianjusten.com.br/)",
+  "author": "Rafael Bernardo <rafamaxber@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/willianjusten/js-tdd-course/issues"
@@ -40,6 +45,10 @@
     "eslint-plugin-react": "^6.4.1",
     "husky": "^0.11.9",
     "mocha": "^3.2.0",
-    "nyc": "^10.2.0"
+    "node-fetch": "1.6.3",
+    "nyc": "^10.2.0",
+    "sinon": "2.2.0",
+    "sinon-chai": "2.10.0",
+    "sinon-stub-promise": "4.0.0"
   }
 }
