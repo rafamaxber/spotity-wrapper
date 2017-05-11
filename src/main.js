@@ -15,5 +15,5 @@ function searchTrack() {
 }
 
 export {
-  search, searchAlbum, searchArtist, searchPlaylist, searchTrack
+  search, searchAlbum, searchArtist, searchPlaylist, searchTrack,
 };

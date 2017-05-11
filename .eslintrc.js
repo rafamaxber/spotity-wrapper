@@ -3,6 +3,10 @@ module.exports = {
     "plugins": [
         "react",
         "jsx-a11y",
-        "import"
-    ]
+        "import",
+    ],
+    "env": {
+        "browser": true,
+        "node": true
+    }
 };
