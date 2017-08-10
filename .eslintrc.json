@@ -1,12 +1,17 @@
 {
-  "extends": "airbnb",
-  "plugins": [
-      "react",
-      "jsx-a11y",
-      "import"
-  ],
-  "env": {
-      "browser": true,
-      "node": true
-  }
+    "extends": "airbnb-base",
+    "plugins": [
+        "import",
+        "chai"
+    ],
+    "env": {
+        "chai/expect": true,
+        "es6": true,
+        "mocha": true,
+        "browser": true,
+        "node": true
+    },
+    "globals": {
+      "expect": true
+    }
 }
