@@ -1,3 +1,5 @@
+/* no-used artist */
+
 import chai, {
   expect,
 } from 'chai';
@@ -23,7 +25,7 @@ describe('Spotify Wrapper', () => {
 
   beforeEach(() => {
     fetchedStub = sinon.stub(global, 'fetch');
-    promise = fetchedStub.returnsPromise()
+    promise = fetchedStub.returnsPromise();
   });
 
   afterEach(() => {
@@ -34,15 +36,8 @@ describe('Spotify Wrapper', () => {
     it('Should exist the search method', () => expect(search).to.exist);
     it('Should exist the searchAlbum method', () => expect(searchAlbum).to.exist);
     it('Should exist the searchArtist method', () => expect(searchArtist).to.exist);
-
-    it('Should exist the searchTrack method', () => {
-      expect(searchTrack).to.exist;
-    });
-
-    it('Should exist the searchPlaylist method', () => {
-      expect(searchPlaylist).to.exist;
-    });
-
+    it('Should exist the searchTrack method', () => expect(searchTrack).to.exist);
+    it('Should exist the searchPlaylist method', () => expect(searchPlaylist).to.exist);
   });
 
   describe('Generic search', () => {
@@ -86,13 +81,13 @@ describe('Spotify Wrapper', () => {
     });
 
     it('Should call fetch with the correct URL', () => {
-      const artist = searchArtist('Muse')
+      const artist = searchArtist('Muse');
       expect(fetchedStub).to.have.been
-        .calledWith('https://api.spotify.com/v1/search?q=Muse&type=artist')
+        .calledWith('https://api.spotify.com/v1/search?q=Muse&type=artist');
 
-      const artist2 = searchArtist('Incubus')
+      const artist2 = searchArtist('Incubus');
       expect(fetchedStub).to.have.been
-        .calledWith('https://api.spotify.com/v1/search?q=Incubus&type=artist')
+        .calledWith('https://api.spotify.com/v1/search?q=Incubus&type=artist');
     });
   });
 
@@ -103,11 +98,11 @@ describe('Spotify Wrapper', () => {
     });
 
     it('Should call fetch with the correct URL', () => {
-      const album = searchAlbum('Muse')
+      const album = searchAlbum('Muse');
       expect(fetchedStub).to.have.been
-        .calledWith('https://api.spotify.com/v1/search?q=Muse&type=album')
+        .calledWith('https://api.spotify.com/v1/search?q=Muse&type=album');
 
-      const album2 = searchAlbum('Incubus&type=album')
+      const album2 = searchAlbum('Incubus&type=album');
     });
   });
 
@@ -118,13 +113,13 @@ describe('Spotify Wrapper', () => {
     });
 
     it('Should call fetch with the correct URL', () => {
-      const playlist = searchPlaylist('Muse')
+      const playlist = searchPlaylist('Muse');
       expect(fetchedStub).to.have.been
-        .calledWith('https://api.spotify.com/v1/search?q=Muse&type=playlist')
+        .calledWith('https://api.spotify.com/v1/search?q=Muse&type=playlist');
 
-      const playlist2 = searchPlaylist('Wesley Safadão')
+      const playlist2 = searchPlaylist('Wesley Safadão');
       expect(fetchedStub).to.have.been
-        .calledWith('https://api.spotify.com/v1/search?q=Wesley Safadão&type=playlist')
+        .calledWith('https://api.spotify.com/v1/search?q=Wesley Safadão&type=playlist');
     });
   });
 
@@ -135,13 +130,13 @@ describe('Spotify Wrapper', () => {
     });
 
     it('Should call fetch with the correct URL', () => {
-      const track = searchTrack('Muse')
+      const track = searchTrack('Muse');
       expect(fetchedStub).to.have.been
-        .calledWith('https://api.spotify.com/v1/search?q=Muse&type=track')
+        .calledWith('https://api.spotify.com/v1/search?q=Muse&type=track');
 
-      const track2 = searchTrack('Incubus')
+      const track2 = searchTrack('Incubus');
       expect(fetchedStub).to.have.been
-        .calledWith('https://api.spotify.com/v1/search?q=Incubus&type=track')
+        .calledWith('https://api.spotify.com/v1/search?q=Incubus&type=track');
     });
   });
 });
