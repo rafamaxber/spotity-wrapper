@@ -1,4 +1,4 @@
-/* no-used artist */
+/* eslint no-unused-vars: "error" */
 
 import chai, {
   expect,
