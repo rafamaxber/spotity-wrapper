@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {
   searchAlbum,
   searchArtist,
@@ -8,5 +9,5 @@ import {
 
 import {
   getAlbum,
-  getAlbuns
+  getAlbuns,
 } from './album';

@@ -1,4 +1,4 @@
-import { API_URL } from './config';
+import API_URL from './config';
 
 function getAlbum(id) {
   return fetch(`${API_URL}albums/${id}`)
