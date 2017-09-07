@@ -1,5 +1,3 @@
-/* eslint no-unused-vars: "error" */
-
 import chai, {
   expect,
 } from 'chai';
@@ -13,7 +11,7 @@ import {
   searchArtist,
   searchPlaylist,
   searchTrack,
-} from '../src/main';
+} from '../src/search';
 
 chai.use(sinonChai);
 sinonStubPromise(sinon);
