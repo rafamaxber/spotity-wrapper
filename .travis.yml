@@ -4,8 +4,8 @@ node_js:
   - "7"
 before_script:
   - npm run build:all
+after_success:
+  - npm run coveralls
 cache:
   directories:
     - "node_modules"
-after_script:
-  - npm run test:coverage
